@@ -1,0 +1,110 @@
+:root {
+ --color-red: #e50914;
+ --color-black: #141414;
+ --color-white: #ffffff;
+ --color-light-grey: #aaaaaa;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  background: var(--color-black, #141414);
+  color: var(--color-white, #fff);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.header__logo {
+  color: var(--color-red, #e50914);
+  font-size: 2.5rem;
+  font-family: 'Arial Black', Times, serif;
+  text-transform: uppercase;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+.header__nav__item {
+  margin-right: 10px;
+}
+.header__nav__link {
+  color: var(--color-light-grey, #aaaaaa);
+  padding: 10px;
+}
+.header__nav__link:hover {
+  color: var(--color-white, #fff);
+  padding: 10px;
+}
+
+/* FEATURED */
+.featured {
+  font-size: 1rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+    url('../images/capa-house.jpg') center -100px no-repeat;
+  background-size: cover;
+
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+}
+.featured .container {
+  max-width: 30%;
+}
+.featured__title {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-bottom: 1rem;
+}
+.featured__actions {
+  margin-top: 2.5rem;
+}
+.featured__actions .btn {
+  border: none;
+  padding: 15px 30px;
+  color: var(--color-white, #fff);
+  background: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.featured__actions .btn:hover {
+  background: var(--color-white, #fff);
+  color: var(--color-black, #141414);
+}
