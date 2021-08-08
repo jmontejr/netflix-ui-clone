@@ -43,7 +43,7 @@ a {
 .header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 .header__logo {
@@ -62,17 +62,30 @@ a {
 .header__nav__link {
   color: var(--color-light-grey, #aaaaaa);
   padding: 10px;
+  font-size: 0.8rem;
 }
 .header__nav__link:hover {
   color: var(--color-white, #fff);
   padding: 10px;
 }
 
+@media only screen and (min-width: 768px) {
+  .header__nav__link {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .header .container {
+    justify-content: space-between;
+  }
+}
+
+
 /* FEATURED */
 .featured {
   font-size: 1rem;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
-    url('../images/capa-house.jpg') center -100px no-repeat;
+    url('../images/capa-house.jpg') center top no-repeat;
   background-size: cover;
 
   min-height: 70vh;
@@ -84,7 +97,7 @@ a {
   padding: 1rem;
 }
 .featured .container {
-  max-width: 30%;
+  max-width: 80%;
 }
 .featured__title {
   text-transform: uppercase;
@@ -107,4 +120,28 @@ a {
 .featured__actions .btn:hover {
   background: var(--color-white, #fff);
   color: var(--color-black, #141414);
+}
+
+@media only screen and (min-width: 768px) {
+  .featured .container {
+    max-width: 60%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .featured {
+    background-position: center -100px;
+  }
+  .featured .container {
+    max-width: 30%;
+  }
+}
+
+
+/* LIST MOVIES */
+.list__titles {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  margin: 20px 0 5px 10px;
 }
